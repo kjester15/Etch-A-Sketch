@@ -1,4 +1,22 @@
-div {
-    background-color: aqua;
-    margin: 2px;
+#etch-container {
+    display: flex;
+    flex-direction: column;
 }
+
+div {
+    background-color: rgb(164, 164, 164);
+    margin: 15–px;
+}
+
+#divRow {
+    display: flex;
+    height: 60px;
+}
+
+#divCol {
+    height: 60px;
+    width: 60px;
+    background-color: aqua;
+    margin: 3px;
+}
+

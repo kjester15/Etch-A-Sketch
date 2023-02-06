@@ -6,13 +6,12 @@ function createDivs () {
     const numberRows = prompt("How many ROWS would you like?");
     for (let i = 0; i < numberRows; i++) {
         const rowDiv = document.createElement('div');
-        rowDiv.setAttribute('id', `DivX${i+1}`)
-        document.body.appendChild(rowDiv);
+        rowDiv.setAttribute('id', `divRow`)
+        document.getElementById('etch-container').appendChild(rowDiv);
         // second loop creates x divs inside the first row
         for (let j = 0; j < numberColumns; j++) {
             const colDiv = document.createElement('div');
-            colDiv.setAttribute('id', `DivY${j+1}`)
-            // let currentDiv = document.getElementById(`DivX${i+1}`);
+            colDiv.setAttribute('id', `divCol`)
             rowDiv.appendChild(colDiv);
         }
     }
