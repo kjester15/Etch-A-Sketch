@@ -1,22 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 #etch-container {
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
+    max-width: 960px;
+    max-height: 960px;
 }
 
-div {
-    background-color: rgb(164, 164, 164);
-    margin: 15–px;
+#divCol:hover {
+    background-color: yellow;
 }
 
 #divRow {
     display: flex;
-    height: 60px;
+    height: 9.6px;
 }
 
 #divCol {
-    height: 60px;
-    width: 60px;
-    background-color: aqua;
-    margin: 3px;
+    background-color: rgb(180, 180, 180);
+    flex: 1;
 }
 
