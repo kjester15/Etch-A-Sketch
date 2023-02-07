@@ -1,6 +1,10 @@
 body {
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 #etch-container {
@@ -8,21 +12,23 @@ body {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    max-width: 960px;
-    max-height: 960px;
+    max-width: 700px;
+    max-height: 700px;
+    flex: 1;
 }
 
-#divCol:hover {
-    background-color: yellow;
+.divCol:hover {
+    /* background-color: yellow; */
 }
 
-#divRow {
+.divRow {
     display: flex;
-    height: 9.6px;
+    height: 10px;
 }
 
-#divCol {
-    background-color: rgb(180, 180, 180);
+.divCol {
+    display: flex;
+    background-color: rgb(205, 205, 205);
     flex: 1;
 }
 
