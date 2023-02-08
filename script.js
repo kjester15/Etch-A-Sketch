@@ -1,7 +1,12 @@
-document.addEventListener('click', createDivs);
+document.getElementById('start').addEventListener('click', createDivs);
+document.getElementById('reset').addEventListener('click', restart);
 const divs = document.querySelectorAll('div');
 divs.forEach(div => div.addEventListener('mouseover', colorSquare));
 document.addEventListener('mouseover', colorSquare);
+
+function restart () {
+    document.location.reload();
+}
 
 function createDivs () {
     let numberColumns = 0;
