@@ -7,6 +7,11 @@ body {
     min-height: 100vh;
 }
 
+.sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
 #etch-container {
     display: flex;
     flex-direction: column;
@@ -15,11 +20,7 @@ body {
     max-width: 700px;
     max-height: 700px;
     flex: 1;
-}
-
-.divCol:hover {
-    /* remove and add js */
-    background-color: yellow;
+    background-color: rgb(205, 205, 205);
 }
 
 .divRow {
@@ -29,7 +30,6 @@ body {
 
 .divCol {
     display: flex;
-    background-color: rgb(205, 205, 205);
     flex: 1;
 }
 

@@ -1,5 +1,6 @@
 document.getElementById('start').addEventListener('click', createDivs);
 document.getElementById('reset').addEventListener('click', restart);
+
 const divs = document.querySelectorAll('div');
 divs.forEach(div => div.addEventListener('mouseover', colorSquare));
 document.addEventListener('mouseover', colorSquare);
