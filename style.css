@@ -18,7 +18,8 @@ body {
 }
 
 .divCol:hover {
-    /* background-color: yellow; */
+    /* remove and add js */
+    background-color: yellow;
 }
 
 .divRow {

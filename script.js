@@ -1,4 +1,6 @@
 document.addEventListener('click', createDivs);
+const divs = document.querySelectorAll('div');
+divs.forEach(div => div.addEventListener('mouseover', colorSquare));
 document.addEventListener('mouseover', colorSquare);
 
 function createDivs () {
@@ -20,16 +22,16 @@ function createDivs () {
         for (let j = 0; j < numberColumns; j++) {
             const colDiv = document.createElement('div');
             colDiv.setAttribute('class', 'divCol');
-            colDiv.setAttribute('id', `divCol${j}`);
+            colDiv.setAttribute('id', `divRow${i}divCol${j}`);
             rowDiv.appendChild(colDiv);
         }
     }
 }
 
-function colorSquare(e) {
-    // document.getElementById(this.id).style.backgroundColor = 'red';
-    e.stopPropagation();
-    console.log(this);
+function colorSquare(event) {
+    event.stopPropagation();
+    let answer = event.target.id;
+    console.log(answer);
 }
 
 
