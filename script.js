@@ -29,9 +29,8 @@ function createDivs () {
 }
 
 function colorSquare(event) {
-    event.stopPropagation();
-    let answer = event.target.id;
-    console.log(answer);
+    // event.stopPropagation();
+    event.target.style.backgroundColor = 'red';
 }
 
 
