@@ -16,7 +16,7 @@ body {
     align-self: ;
 }
 
-.color-picker {
+/* .color-picker {
     display: flex;
     flex-direction: column;
 }
@@ -36,7 +36,7 @@ body {
 .color-1 {
     background-color: #ff0000;
     min-width: 10px;
-}
+} */
 
 #etch-container {
     display: flex;
