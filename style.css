@@ -11,10 +11,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 200px;
     min-width: 100px;
     height: 100vh;
-    background-color: rgb(156, 156, 156);
+    background-color: #9c9c9c;
 }
 
 #etch-container {
@@ -27,7 +26,7 @@ body {
     height: 100vh;
     width: 100vw;
     flex: 1;
-    background-color: rgb(205, 205, 205);
+    background-color: #cdcdcd;
 }
 
 .divRow {
