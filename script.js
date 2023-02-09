@@ -41,10 +41,15 @@ function createDivs () {
         }
     }
     const divs = document.querySelectorAll('div.divCol');
-    divs.forEach(div => div.addEventListener('mousedown', colorSquare));
+    divs.forEach(div => div.addEventListener('mouseover', colorSquare));
 }
 
 function colorSquare(event) {
     event.target.style.backgroundColor = '#000000';
     event.stopPropagation();
 };
+
+function sliderChange() {
+    let sliderVal = document.getElementById('sizeSlider').value;
+    document.getElementById('size-box').innerHTML = 'sliderVal';
+}
