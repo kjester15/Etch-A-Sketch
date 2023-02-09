@@ -1,9 +1,9 @@
 document.getElementById('start').addEventListener('click', createDivs);
 document.getElementById('reset').addEventListener('click', restart);
 
-const divs = document.querySelectorAll('div');
-divs.forEach(div => div.addEventListener('mouseover', colorSquare));
-document.addEventListener('mouseover', colorSquare);
+// const divs = document.querySelectorAll('div');
+// divs.forEach(div => div.addEventListener('mouseover', colorSquare));
+
 
 function restart () {
     document.location.reload();
@@ -22,7 +22,7 @@ function createDivs () {
     for (let i = 0; i < numberRows; i++) {
         const rowDiv = document.createElement('div');
         rowDiv.setAttribute('class', 'divRow');
-        rowDiv.setAttribute('id', `divRow${i}`);
+        // rowDiv.setAttribute('id', `divRow${i}`);
         document.getElementById('etch-container').appendChild(rowDiv);
         // second loop creates j divs inside i row
         for (let j = 0; j < numberColumns; j++) {
@@ -32,11 +32,15 @@ function createDivs () {
             rowDiv.appendChild(colDiv);
         }
     }
+    const divs = document.querySelectorAll('div.divCol');
+    divs.forEach(div => div.addEventListener('mouseover', colorSquare));
 }
 
 function colorSquare(event) {
-    // event.stopPropagation();
-    event.target.style.backgroundColor = 'red';
-}
+    console.log(event.target.className);
+    event.target.style.backgroundColor = 'yellow';
+    event.stopPropagation();
+};
 
 
+// document.getElementsByClassName('colorMe').addEventListener('mouseover', colorSquare);
