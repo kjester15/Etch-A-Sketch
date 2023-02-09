@@ -5,19 +5,22 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: #e5fee4;
-    flex-wrap: wrap;
     font-family: 'Courier New', Courier, monospace;
 }
 
 .sidebar {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     height: 100vh;
     background-color: #e5fee4;
     flex: 1;
     max-width: 300px;
+}
+
+h1 {
+    margin-top: 50px;
 }
 
 .slider-container {
@@ -85,7 +88,9 @@ input[type=range] {
 button {
     margin: 10px;
     margin-top: 15px;
-    max-width: 200px;
+    width: 100px;
+    max-height: 25px;
+    flex: 1;
     padding: 6px;
     border: none;
     border-radius: 10px;
