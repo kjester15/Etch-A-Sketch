@@ -16,15 +16,16 @@ function restart () {
 }
 
 function deleteOldEtch () {
-    const removeOldDivs = document.querySelectorAll('divRow');
-    removeOldDivs.remove();
+    const etchContainer = document.getElementById('etch-container');
+    const removeOldRows = document.querySelectorAll('.divRow');
+    removeOldRows.forEach(removeOldRow => etchContainer.removeChild(removeOldRow));
 }
 
 function createDivs () {
     let numberColumns = document.getElementById('sizeSlider').value;
     let numberRows = document.getElementById('sizeSlider').value;
     
-    // deleteOldEtch();
+    deleteOldEtch();
     // first loop is for the number of rows
     for (let i = 0; i < numberRows; i++) {
         const rowDiv = document.createElement('div');
