@@ -1,6 +1,8 @@
-document.getElementById('sizeSlider').addEventListener('mouseup', createDivs);
+document.getElementById('sizeSlider').addEventListener('input', createDivs);
+document.getElementById('sizeSlider').addEventListener('input', sliderChange);
 document.getElementById('reset').addEventListener('click', restart);
 window.addEventListener('load', createDivs);
+
 
 function restart () {
     let numberColumns = document.getElementById('sizeSlider').value;
@@ -50,6 +52,7 @@ function colorSquare(event) {
 };
 
 function sliderChange() {
-    let sliderVal = document.getElementById('sizeSlider').value;
-    document.getElementById('size-box').innerHTML = 'sliderVal';
+    let slider = document.getElementById('sizeSlider');
+    let output = document.getElementById('size-box');
+    output.innerHTML = `${slider.value} x ${slider.value}`;
 }

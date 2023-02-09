@@ -6,12 +6,14 @@ body {
     min-height: 100vh;
     background-color: #e5fee4;
     flex-wrap: wrap;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .sidebar {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     height: 100vh;
     background-color: #e5fee4;
     flex: 1;
@@ -23,20 +25,20 @@ body {
     flex-direction: column;
 }
 
-.size-text, .slider {
+.size-text, .slider, .size-box {
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 5px;
 }
 
 .size-text {
-    font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
     display: flex;
+    align-self: center;
 }
 
-.size-box {
-    border: 1px solid black;
+#size-box {
+    align-self: center;
     min-height: 15px;
     margin-left: 10px;
     margin-right: 10px;
@@ -83,8 +85,10 @@ input[type=range] {
 button {
     margin: 10px;
     margin-top: 15px;
+    max-width: 200px;
     padding: 6px;
     border: none;
     border-radius: 10px;
     background-color: #b9ffb7;
+    font-family: 'Courier New', Courier, monospace;
 }
