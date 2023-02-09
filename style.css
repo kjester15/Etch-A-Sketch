@@ -2,7 +2,6 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
@@ -14,6 +13,29 @@ body {
     min-width: 100px;
     height: 100vh;
     background-color: #9c9c9c;
+    align-self: ;
+}
+
+.color-picker {
+    display: flex;
+    flex-direction: column;
+}
+
+.row-1 {
+    display: flex;
+}
+
+.row-2 {
+    display: flex;
+}
+
+.row-3 {
+    display: flex;
+}
+
+.color-1 {
+    background-color: #ff0000;
+    min-width: 10px;
 }
 
 #etch-container {
@@ -21,17 +43,15 @@ body {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    min-width: 100px;
-    min-height: 100px;
-    height: 100vh;
-    width: 100vw;
+    max-height: 100vh;
+    max-width: 100vw;
     flex: 1;
     background-color: #cdcdcd;
 }
 
 .divRow {
     display: flex;
-    height: 10px;
+    min-height: 10px;
 }
 
 .divCol {
