@@ -35,6 +35,6 @@ function createDivs () {
 
 function colorSquare(event) {
     console.log(event.target.className);
-    event.target.style.backgroundColor = 'yellow';
+    event.target.style.backgroundColor = '#cccccc';
     event.stopPropagation();
 };
