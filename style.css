@@ -4,15 +4,19 @@ body {
     display: flex;
     align-items: center;
     min-height: 100vh;
+    background-color: #e5fee4;
+    flex-wrap: wrap;
 }
 
 .sidebar {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-width: 100px;
     height: 100vh;
     background-color: #e5fee4;
+    flex: 1;
+    max-width: 200px;
+    margin-left: 50px;
 }
 
 .slider-container {
@@ -32,40 +36,37 @@ body {
     display: flex;
 }
 
+.size-box {
+    border: 1px solid black;
+    min-height: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    flex: 1;
+}
+
 input[type=range] {
     filter: hue-rotate(292deg);
 }
 
-/* .color-picker {
+.right-side {
     display: flex;
-    flex-direction: column;
+    background-color: #e5fee4;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
 }
-
-.row-1 {
-    display: flex;
-}
-
-.row-2 {
-    display: flex;
-}
-
-.row-3 {
-    display: flex;
-}
-
-.color-1 {
-    background-color: #ff0000;
-    min-width: 10px;
-} */
 
 #etch-container {
     display: flex;
     flex-direction: column;
     margin: 0;
     padding: 0;
-    height: 100vh;
-    width: 100vw;
-    flex: 1;
+    min-height: 400px;
+    min-width: 400px;
+    flex: 0 1 auto;
     background-color: #ebebeb;
 }
 
@@ -77,6 +78,7 @@ input[type=range] {
 .divCol {
     display: flex;
     flex: 1;
+    border: 0.2px solid black;
 }
 
 button {
