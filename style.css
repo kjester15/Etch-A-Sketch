@@ -36,6 +36,14 @@ h1 {
     margin-bottom: 5px;
 }
 
+.slider {
+    transition: 0.7s;
+}
+
+.slider:hover {
+    transform: scale(1.2);
+}
+
 .size-text {
     font-size: 23px;
     font-weight: 700;
@@ -106,6 +114,12 @@ button {
 
 #reset {
     background-color: #b9ffb7;
+    transition: 0.7s;
+}
+
+#reset:hover {
+    background-color: #86fb82;
+    transform: scale(1.2);
 }
 
 #rgbBtn {
@@ -124,8 +138,19 @@ button {
         rgba(255, 0, 0, 1) 100%
     );
     color: #ffff0e;
+    transition: 0.7s;
+}
+
+#rgbBtn:hover {
+    transform: scale(1.2);
 }
 
 #blackBtn {
     background-color: #939393;
+    transition: 0.7s;
+}
+
+#blackBtn:hover {
+    background-color: #7c7c7c;
+    transform: scale(1.2);
 }

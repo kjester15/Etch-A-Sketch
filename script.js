@@ -2,7 +2,18 @@ document.getElementById('sizeSlider').addEventListener('input', createDivs);
 document.getElementById('sizeSlider').addEventListener('input', sliderChange);
 document.getElementById('reset').addEventListener('click', restart);
 window.addEventListener('load', createDivs);
+document.getElementById('rgbBtn').addEventListener('click', rgbMode);
+document.getElementById('rgbBtn').addEventListener('click', blackMode);
 
+let mode = 'black';
+
+function rgbMode () {
+    mode = 'rbg';
+}
+
+function blackMode () {
+    mode = 'black';
+}
 
 function restart () {
     let numberColumns = document.getElementById('sizeSlider').value;
@@ -47,8 +58,17 @@ function createDivs () {
 }
 
 function colorSquare(event) {
-    event.target.style.backgroundColor = '#000000';
-    event.stopPropagation();
+    if (mode == 'black') {
+        event.target.style.backgroundColor = '#000000';
+        event.stopPropagation();
+    }
+    else if (mode == 'rgb') {
+        let r = Math.floor(Math.random() * 256);
+        let g = Math.floor(Math.random() * 256);
+        let b = Math.floor(Math.random() * 256);
+        event.target.style.backgroundColor = `rgb(${r},${g},${b})`;
+        event.stopPropagation();
+    }
 };
 
 function sliderChange() {
