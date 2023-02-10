@@ -3,12 +3,12 @@ document.getElementById('sizeSlider').addEventListener('input', sliderChange);
 document.getElementById('reset').addEventListener('click', restart);
 window.addEventListener('load', createDivs);
 document.getElementById('rgbBtn').addEventListener('click', rgbMode);
-document.getElementById('rgbBtn').addEventListener('click', blackMode);
+document.getElementById('blackBtn').addEventListener('click', blackMode);
 
 let mode = 'black';
 
 function rgbMode () {
-    mode = 'rbg';
+    mode = 'color';
 }
 
 function blackMode () {
@@ -62,7 +62,7 @@ function colorSquare(event) {
         event.target.style.backgroundColor = '#000000';
         event.stopPropagation();
     }
-    else if (mode == 'rgb') {
+    else if (mode == 'color') {
         let r = Math.floor(Math.random() * 256);
         let g = Math.floor(Math.random() * 256);
         let b = Math.floor(Math.random() * 256);
