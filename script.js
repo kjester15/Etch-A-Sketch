@@ -64,8 +64,36 @@ function createDivs () {
 
 function colorSquare(event) {
     if (mode == 'black') {
-        event.target.style.backgroundColor = '#000000';
-        event.stopPropagation();
+        let value = event.target.style.backgroundColor;
+        if (value == 0) {
+            event.target.style.backgroundColor = 'rgb(125, 125, 125)';
+            event.stopPropagation();
+        }
+        // fix r g & b variable array to pull numbers consistently. array values as is will be messed up once the value goes below 100
+        if (value != 0) {
+            let r = Number((value[4]+value[5]+value[6]));
+            console.log(typeof(r));
+            let newR = r-12.5;
+            if (newR < 0) {
+                newR = 0;
+            }
+            let g = Number((value[9]+value[10]+value[11]));
+            console.log(typeof(g));
+            let newG = g-12.5;
+            if (newG < 0) {
+                newG = 0;
+            } 
+            let b = Number((value[14]+value[15]+value[16]));
+            console.log(typeof(b));
+            let newB = b-12.5
+            if (newB < 0) {
+                newB = 0;
+            }
+            event.target.style.backgroundColor = `rgb(${newR}, ${newG}, ${newB})`;
+            console.log(r);
+            console.log(g);
+            console.log(b);
+        }
     }
     else if (mode == 'color') {
         let r = Math.floor(Math.random() * 256);
