@@ -30,6 +30,11 @@ h1 {
     margin-bottom: 30px;
 }
 
+.pickColor {
+    font-size: 22px;
+    font-weight: 700;
+}
+
 .size-text, .slider, .size-box {
     margin-left: 10px;
     margin-right: 10px;

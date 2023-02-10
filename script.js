@@ -77,7 +77,7 @@ function colorSquare(event) {
             event.target.style.backgroundColor = 'rgb(125, 125, 125)';
             event.stopPropagation();
         }
-        // increase black value each time the cursor passes over another greyscale value
+        // increase black value each time the cursor passes over another value
         else if (value != 0) {
             let r = Number(value[0]);
             let newR = r-12.5;
