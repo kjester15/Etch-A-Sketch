@@ -6,8 +6,13 @@ document.getElementById('rgbBtn').addEventListener('click', rgbMode);
 document.getElementById('blackBtn').addEventListener('click', blackMode);
 document.getElementById('shadeBtn').addEventListener('click', shadeMode);
 document.getElementById('eraser').addEventListener('click', eraseMode);
+document.getElementById('colorPick').addEventListener('input', colorPickMode);
 
 let mode = 'black';
+
+function colorPickMode () {
+    mode = 'colorPick';
+}
 
 function eraseMode () {
     mode = 'erase';
@@ -110,6 +115,11 @@ function colorSquare(event) {
     }
     else if (mode == 'black') {
         event.target.style.backgroundColor = 'black';
+        event.stopPropagation();
+    }
+    else if (mode == 'colorPick') {
+        let colorPicker = document.getElementById('colorPick');
+        event.target.style.backgroundColor = `${colorPicker.value}`;
         event.stopPropagation();
     }
 };
