@@ -4,6 +4,7 @@ document.getElementById('reset').addEventListener('click', restart);
 window.addEventListener('load', createDivs);
 document.getElementById('rgbBtn').addEventListener('click', rgbMode);
 document.getElementById('blackBtn').addEventListener('click', blackMode);
+document.getElementById('shadeBtn').addEventListener('click', shadeMode);
 document.getElementById('eraser').addEventListener('click', eraseMode);
 
 let mode = 'black';
@@ -14,6 +15,10 @@ function eraseMode () {
 
 function rgbMode () {
     mode = 'color';
+}
+
+function shadeMode () {
+    mode = 'shade';
 }
 
 function blackMode () {
@@ -63,36 +68,33 @@ function createDivs () {
 }
 
 function colorSquare(event) {
-    if (mode == 'black') {
+    if (mode == 'shade') {
         let value = event.target.style.backgroundColor;
+        value = value.substring(4,value.length-1);
+        value = value.replaceAll(" ", "");
+        value = value.split(',');
         if (value == 0) {
             event.target.style.backgroundColor = 'rgb(125, 125, 125)';
             event.stopPropagation();
         }
-        // fix r g & b variable array to pull numbers consistently. array values as is will be messed up once the value goes below 100
-        if (value != 0) {
-            let r = Number((value[4]+value[5]+value[6]));
-            console.log(typeof(r));
+        // increase black value each time the cursor passes over another greyscale value
+        else if (value != 0) {
+            let r = Number(value[0]);
             let newR = r-12.5;
             if (newR < 0) {
                 newR = 0;
             }
-            let g = Number((value[9]+value[10]+value[11]));
-            console.log(typeof(g));
+            let g = Number(value[1]);
             let newG = g-12.5;
             if (newG < 0) {
                 newG = 0;
             } 
-            let b = Number((value[14]+value[15]+value[16]));
-            console.log(typeof(b));
+            let b = Number(value[2]);
             let newB = b-12.5
             if (newB < 0) {
                 newB = 0;
             }
             event.target.style.backgroundColor = `rgb(${newR}, ${newG}, ${newB})`;
-            console.log(r);
-            console.log(g);
-            console.log(b);
         }
     }
     else if (mode == 'color') {
@@ -104,6 +106,10 @@ function colorSquare(event) {
     }
     else if (mode == 'erase') {
         event.target.style.backgroundColor = 'white';
+        event.stopPropagation();
+    }
+    else if (mode == 'black') {
+        event.target.style.backgroundColor = 'black';
         event.stopPropagation();
     }
 };

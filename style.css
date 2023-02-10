@@ -151,6 +151,16 @@ button {
 }
 
 #blackBtn:hover {
+    background-color: #5c5c5c;
+    transform: scale(1.2);
+}
+
+#shadeBtn {
+    background-color: #cecece;
+    transition: 0.7s;
+}
+
+#shadeBtn:hover {
     background-color: #7c7c7c;
     transform: scale(1.2);
 }
