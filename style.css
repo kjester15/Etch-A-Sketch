@@ -154,3 +154,13 @@ button {
     background-color: #7c7c7c;
     transform: scale(1.2);
 }
+
+#eraser {
+    background-color: #eec3ff;
+    transition: 0.7s;
+}
+
+#eraser:hover {
+    background-color: #e7b3fc;
+    transform: scale(1.2);
+}

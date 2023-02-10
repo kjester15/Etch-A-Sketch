@@ -4,8 +4,13 @@ document.getElementById('reset').addEventListener('click', restart);
 window.addEventListener('load', createDivs);
 document.getElementById('rgbBtn').addEventListener('click', rgbMode);
 document.getElementById('blackBtn').addEventListener('click', blackMode);
+document.getElementById('eraser').addEventListener('click', eraseMode);
 
 let mode = 'black';
+
+function eraseMode () {
+    mode = 'erase';
+}
 
 function rgbMode () {
     mode = 'color';
@@ -67,6 +72,10 @@ function colorSquare(event) {
         let g = Math.floor(Math.random() * 256);
         let b = Math.floor(Math.random() * 256);
         event.target.style.backgroundColor = `rgb(${r},${g},${b})`;
+        event.stopPropagation();
+    }
+    else if (mode == 'erase') {
+        event.target.style.backgroundColor = 'white';
         event.stopPropagation();
     }
 };
